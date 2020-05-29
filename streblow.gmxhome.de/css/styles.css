@@ -1,0 +1,18 @@
+.t0 {font-family:verdana;font-size:8pt;line-height:10pt}
+.t1 {font-family:verdana;font-size:9pt;line-height:11pt}
+.t2 {font-family:verdana;font-size:10pt;line-height:12pt}
+.t3 {font-family:verdana;font-size:12pt;line-height:14pt}
+.t4 {font-family:verdana;font-size:14pt;line-height:16pt}
+.t5 {font-family:verdana;font-size:16pt;line-height:18pt}
+.t6 {font-family:verdana;font-size:18pt;line-height:20pt}
+
+a.normal {text-decoration:none}
+a.normal:hover {color:#ffc040}
+a.normal:focus {color:#ffc040}
+
+.tree {white-space:nowrap}
+.tree img {border:0px;vertical-align:middle}
+.tree a {text-decoration:none}
+.tree a.node,.tree a.nodeSel {white-space:nowrap;padding:1px 2px 1px 2px}
+.tree a.node:hover,.tree a.nodeSel:hover {color:#ffc040}
+.tree .clip {overflow:hidden}
