@@ -121,7 +121,7 @@ Numpad-Richtungstasten zum Verschieben der Markierung, Numpad-5 zur Feldauswahl<
 <form name="chessCtrl1" onsubmit="return(false);">
 <p class="t2"><b>Spieleinstellungen</b><br><input id="useAIAsk" name="useAI" type="checkbox" onclick="chess.useAI(this.checked);" checked /><label for="useAIAsk">Computergegner</label><br>Promotion zu: <select onchange="chess.setPromotion(this.selectedIndex);" name="selPromo"><option>Dame</option><option>Turm</option><option>L&auml;ufer</option><option>Springer</option></select><br><input type="button" name="strtBtn" value="Neues Spiel" onclick="chess.organize(this.form.plyerClr1[1].checked);" /> (Spieler: <input type="radio" name="plyerClr1" id="white1" checked /> <label for="white1">wei&szlig;</label> <input type="radio" name="plyerClr1" id="black1" /> <label for="black1">schwarz</label>)<br>Suchtiefe: <input type="text" name="plyDepthCtrl" value="0" size="2" onkeypress=";if(event.keyCode===13&&chess.setPlyDepth(this.value)){alert('Suchtiefe gesetzt.' + (Number(this.value) > 2 ? '\nAchtung! Das Spiel k&ouml;nnte stark verlangsamt laufen.' : ' Gutes Gelingen.'));}" /> (ENTER f&uuml;r Eingabe)</p>
 
-<div id="chessToolBar"><div id="setViewBtns"><span id="viewBtn2" onclick="chess.setView(2);pressVwBtn(2);" onmousedown="return(false);">3D-Brett</span><span id="viewBtn1" onclick="chess.setView(1);pressVwBtn(1);" onmousedown="return(false);">2D-Brett</span><span id="viewBtn3" onclick="chess.setView(3);pressVwBtn(3);" onmousedown="return(false);">Beide</span></div>
+<div id="chessToolBar" style="float:left"><div id="setViewBtns"><span id="viewBtn2" onclick="chess.setView(2);pressVwBtn(2);" onmousedown="return(false);">3D-Brett</span><span id="viewBtn1" onclick="chess.setView(1);pressVwBtn(1);" onmousedown="return(false);">2D-Brett</span><span id="viewBtn3" onclick="chess.setView(3);pressVwBtn(3);" onmousedown="return(false);">Beide</span></div>
 <img class="tbBtn" src="icons/skip-backward.png" title="" onclick="chess.backToStart();" />
 <img class="tbBtn" src="icons/backward.png" title="" onclick="chess.navigate(-10, true);" />
 <img class="tbBtn" src="icons/reverse-play.png" title="" onclick="chess.navigate(-1, true);" />
@@ -135,9 +135,9 @@ Numpad-Richtungstasten zum Verschieben der Markierung, Numpad-5 zur Feldauswahl<
 </div>
 </form>
 
-<div id="chessDesk"></div>
+<div id="chessDesk" style="float:left"></div>
 
-<form name="chessCtrl2" onsubmit="return(false);">
+<form name="chessCtrl2" onsubmit="return(false)"; style="clear:both">
 <p class="t2"><b>Ansichtseinstellungen</b><br>
 Sicht: <select onchange="chess.setSide(this.selectedIndex);" name="selSide"><option>Wei&szlig;</option><option>Schwarz</option><option selected>Spieler</option></select><br><input id="useKeybAsk" name="KeybCtrl" type="checkbox" onclick="chess.useKeyboard(this.checked);" checked /> <label for="useKeybAsk">Tastatur benutzen</label><br>Motion-Rate: <input type="text" name="frameRateCtrl" value="1000" size="5" onchange="var nMs=new Number(this.value);if(!isNaN(nMs)&&nMs>0){chess.setFrameRate(nMs);}" /> ms</p>
 </form>
@@ -184,7 +184,7 @@ alert("This is the numeric rappresentation of the chessboard:\n\n" + sRappr);
 <br>
 <hr align="left" width="30%" size="2">
 <p class="t0">
-chess.htm - &copy; 2012-02-09 Larsie
+chess.htm - &copy; 2020-05-29 Larsie
 </p>
 </font>
 </body>
